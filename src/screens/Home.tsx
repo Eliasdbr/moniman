@@ -1,6 +1,9 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { User, signOut, Auth } from 'firebase/auth';
+import Button from '../components/Button';
+
+// Componentes
 
 const Home = ({
 	auth,
@@ -15,11 +18,10 @@ const Home = ({
 		<div>
 			<h1>HOME</h1>
 			<h1>Hola, {user.displayName?.split(' ')[0]}!</h1>
-			<button className='p-2 rounded shadow hover:bg-white/20 active:shadow-none'
+			<Button title='Cerrar Sesión'
 				onClick={() => signOut(auth)}
-			>
-				Cerrar Sesión
-			</button>
+				type='primary'
+			/>
 		</div>
 	);
 }

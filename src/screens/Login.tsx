@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { Auth, User } from 'firebase/auth';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import Button from '../components/Button';
 
 const Login = ({
 	auth,
@@ -25,14 +26,15 @@ const Login = ({
 	return (
 		<div>
 			<h1>LOGIN</h1>
-			<button className='p-2 rounded shadow hover:bg-white/20 active:shadow-none'
-				onClick={login}
-			>
-				{ loading 
+			<Button 
+				title={ loading 
 					? 'Cargando...'
 					: 'Ingresar con Google'
 				}
-			</button>
+				onClick={login}
+				type='primary'
+				disabled
+			/>
 		</div>
 	);
 }
