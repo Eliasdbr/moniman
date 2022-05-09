@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { User, signOut, Auth } from 'firebase/auth';
-import Button from '../components/Button';
 
 // Componentes
+import Button from '../components/Button';
 
 const Home = ({
 	auth,

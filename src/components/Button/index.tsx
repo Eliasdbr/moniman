@@ -4,8 +4,7 @@
 
 // Importamos React
 // Importamos el tipo Functional Component
-// Importamos la función useState
-import React, { FC, useState } from 'react';
+import { FC } from 'react';
 
 // Definimos los tipos de propiedades que recibe el componente
 type props = {
@@ -43,7 +42,7 @@ const Button: FC<props> = ({
 	
 	return (
 		<button className={style} onClick={onClick} disabled={disabled}>
-			{icon && null}
+			{icon || null}
 			<h2>{title}</h2>
 		</button>
 	);
